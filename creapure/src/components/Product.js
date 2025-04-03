@@ -24,7 +24,7 @@ const Product = ({product}) => {
     {/* 160 160 h w */}
 
   <div className='w-full md:h-[330px] h-[250px] flex items-center justify-center relative'>
-    <img className='md:w-[330px] md:h-[330px]  h-[250px] w-[250px] rounded-xl group-hover:scale-90 transition-all' src={`http://localhost:1337${product.attributes.image.data[0].attributes.url}`} alt='' />
+    <img className='md:w-[330px] md:h-[330px]  h-[250px] w-[250px] rounded-xl group-hover:scale-90 transition-all' src={`http://localhost:1337${product.attributes?.image?.data?.[0]?.attributes?.url || ''}`} alt='' />
   </div>
 
 
